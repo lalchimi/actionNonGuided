@@ -11,4 +11,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: log a text
-      run: echo "Hello, world !"
+      run: |  
+            echo "line1"
+            echo "line2"
+            echo "line3"
