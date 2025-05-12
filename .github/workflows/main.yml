@@ -10,8 +10,14 @@ jobs:
     - name: Checkout du code
       uses: actions/checkout@v4
 
-    - name: log a text
-      run: |  
-            echo "line1"
-            echo "line2"
-            echo "line3"
+    - name: use secret
+      env : 
+        MY_SECRET: ${{secretv2.MY_SUPER_SECRET}}
+      run: |
+        echo "Le script va utiliser le secret mais ne l'affichera PAS directement."
+        if [ -n "$MY_SECRET" ]; then
+          echo "Le secret est bien passé en variable d'env !"
+        else
+          echo "Oops, le secret n'est pas là."
+          exit 1
+        fi
