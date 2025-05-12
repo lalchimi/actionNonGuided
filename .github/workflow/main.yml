@@ -1,0 +1,10 @@
+name: CI Simple
+
+on: [push]
+
+build:
+  runs: unbuntu-latest
+
+  steps:
+    name: log a text
+    run: echo "Hello, world !"
