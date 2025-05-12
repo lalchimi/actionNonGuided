@@ -7,5 +7,8 @@ jobs:
     runs-on: unbuntu-latest
 
     steps:
+    - name: Checkout du code
+      uses: actions/checkout@v4
+
     - name: "log a text"
       run: echo "Hello, world !"
