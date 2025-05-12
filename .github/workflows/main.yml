@@ -12,7 +12,7 @@ jobs:
 
     - name: use secret
       env : 
-        MY_SECRET: ${{secretv1.MY_SUPER_SECRET}}
+        MY_SECRET: ${{secret1.MY_SUPER_SECRET}}
       run: |
         echo "Le script va utiliser le secret mais ne l'affichera PAS directement."
         if [ -n "$MY_SECRET" ]; then
